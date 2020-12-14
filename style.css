@@ -1,0 +1,434 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-style: sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+}
+
+/*bagian navbar*/
+nav {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 5%;
+    height: 60px;
+    background-image: url(asets/img/country-quilt-dark.png);
+}
+
+nav .logo {
+    float: left;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    cursor: default;
+}
+
+nav .links {
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav .links li {
+    list-style: none;
+}
+
+nav .links a {
+    display: block;
+    padding: 1em;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+#nav-toggle {
+    position: absolute;
+    top: -100px;
+}
+
+nav .menu-toggle {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu-toggle .line {
+    width: 30px;
+    height: 5px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+
+
+nav :checked~.menu-toggle .line:nth-child(1) {
+    background-color: white;
+    transform: translateY(10px) rotate(225deg);
+}
+
+nav :checked~.menu-toggle .line:nth-child(3) {
+    background-color: white;
+    transform: translateY(-10px) rotate(-225deg);
+}
+
+nav :checked~.menu-toggle .line:nth-child(2) {
+    background-color: white;
+    opacity: 0;
+}
+
+/*bagian header/home*/
+header {
+    opacity: .8;
+    color: ivory;
+    text-align: center;
+
+}
+
+header h2 {
+    padding-top: 40px;
+    font-size: 28px;
+    cursor: default;
+}
+
+header p {
+    padding-top: 13px;
+    font-size: 18px;
+    cursor: default;
+}
+
+header .container {
+    background-image: url(asets/img/rsz_backround-image1.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    height: 100vh;
+    width: 100vw;
+}
+
+header img {
+    border-radius: 50%;
+    border: 3px solid #62FF00;
+    box-shadow: 0 5px 5px black;
+    margin: 170px 30px 0;
+    width: 200px;
+    transition: transform .5s ease-out;
+    cursor: pointer;
+}
+
+header img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 10px black;
+}
+
+.about,
+.hoby,
+.galery,
+.contact {
+    cursor: default;
+}
+
+/*bagian about*/
+.about {
+    background-color: #62FF00;
+    color: white;
+    text-align: center;
+    padding: 150px 50px;
+    align-items: center;
+}
+
+.about h1 {
+    text-shadow: 0 2px 0 black;
+    font-size: 36px;
+    text-transform: uppercase;
+    border-bottom: 5px solid white;
+    display: inline-block;
+    padding-bottom: 7px;
+    margin-bottom: 40px;
+}
+
+.about p {
+    font-size: 18px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 25px;
+    padding: 0 35px;
+}
+
+/*bagian hoby*/
+.hoby {
+    background-color: #9FFF00;
+    color: white;
+    text-align: center;
+    padding: 150px 50px;
+    align-items: center;
+}
+
+.hoby h1 {
+    text-shadow: 0 2px 0 black;
+    font-size: 36px;
+    text-transform: uppercase;
+    border-bottom: 5px solid white;
+    display: inline-block;
+    padding-bottom: 7px;
+    margin-bottom: 40px;
+}
+
+.hoby h3 {
+    color: darkblue;
+    font-size: 24px;
+    text-align: center;
+    text-indent: 30px;
+    line-height: 25px;
+    padding-top: 10px;
+}
+
+.hoby p {
+    color: darkblue;
+    font-size: 20px;
+    text-align: center;
+    text-indent: 30px;
+    line-height: 25px;
+    padding: 5px;
+}
+
+.hoby .container a {
+    font-size: 20px;
+    color: blue;
+}
+
+.hoby a:hover {
+    color: red;
+}
+
+.col-2 {
+    width: 33.33%;
+    box-sizing: border-box;
+    padding: 0 10px 15px 15px;
+    float: left;
+}
+
+.col-2 img {
+    width: 100%;
+}
+
+/*bagian gslery*/
+.galery {
+    background-color: #62FF00;
+    text-align: center;
+    color: white;
+    padding: 150px 50px;
+    align-items: center;
+}
+
+.galery h1 {
+    text-shadow: 0 2px 0 black;
+    font-size: 36px;
+    text-transform: uppercase;
+    border-bottom: 5px solid white;
+    display: inline-block;
+    padding-bottom: 7px;
+    margin-bottom: 40px;
+}
+
+.col {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.col-3 {
+    width: 25%;
+    box-sizing: border-box;
+    padding: 0 20px 20px 20px;
+    float: left;
+}
+
+.col-3 img {
+    width: 100%;
+}
+
+.col-3 a:hover img {
+    transform: scale(1.1);
+}
+
+.cont {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: blue;
+}
+
+.cont-3 {
+    width: 33.33%;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    padding: 50px;
+}
+
+/*bagian contact*/
+.contact {
+    background-color: #9FFF00;
+    color: white;
+    text-align: center;
+    padding: 150px 50px;
+    align-items: center;
+}
+
+.contact h1 {
+    text-shadow: 0 2px 0 black;
+    font-size: 36px;
+    text-transform: uppercase;
+    border-bottom: 5px solid white;
+    display: inline-block;
+    padding-bottom: 7px;
+    margin-bottom: 40px;
+}
+
+.contact h3 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+    margin-bottom: 15px;
+}
+
+/*bagian footer*/
+footer {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 30px;
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*responsif*/
+@media screen and (max-width: 768px) {
+    nav .logo {
+        float: none;
+        width: auto;
+        justify-content: center;
+    }
+
+    nav .links {
+        float: none;
+        position: fixed;
+        z-index: 9;
+        left: 0;
+        right: 0;
+        top: 60px;
+        bottom: 100%;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: rgba(0, 0, 0, .8);
+        overflow: hidden;
+        box-sizing: border-box;
+        transition: all .5s ease-in-out;
+    }
+
+    nav .links a {
+        font-size: 20px;
+    }
+
+    nav :checked~.links {
+        bottom: 0;
+    }
+
+    nav .menu-toggle {
+        display: block;
+    }
+
+    .col-2 {
+        width: 100%;
+    }
+
+    .col-3 {
+        width: 50%;
+    }
+
+    .cont-3 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .col-3 {
+        width: 50%;
+    }
+
+    .cont-3 {
+        width: 100%;
+    }
+}
